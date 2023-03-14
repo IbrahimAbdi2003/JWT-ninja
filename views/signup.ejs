@@ -1,4 +1,4 @@
-<%- include('partials/header'); -%>
+- include('partials/header'); -%>
 
 <form action="/signup">
   <h2>Sign up</h2>
@@ -22,7 +22,7 @@
     
     emailError.textContent = '';
     passwordError.textContent = '';
-    
+    const email = form.email.value;
     const password = form.password.value;
     try {
       const res = await fetch('/signup', { 
